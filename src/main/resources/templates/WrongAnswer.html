@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--/*@thymesVar id="problem" type="ca.javateacher.multquiz2.MultProblem"*/-->
+<!--/*@thymesVar id="userAnswer" type="java.lang.String"*/-->
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{css/main.css}" href="../static/css/main.css" rel="stylesheet"  type="text/css"/>
+    <title>Wrong Answer</title>
+</head>
+<body>
+<main>
+    <h1>Multiplication Quiz 2</h1>
+    <h2>Wrong Answer</h2>
+    <h3>Your answer is wrong</h3>
+    <p class="problem_text">
+        <span th:text="${session.problem.a}" class="number">2</span>
+            &times;
+        <span th:text="${session.problem.b}" class="number">2</span> =
+        <span th:text="${session.problem.answer}" class="number">4</span>
+    </p>
+    <p>
+        Your answer: <span th:text="${userAnswer}" class="wrong">5</span>
+    </p>
+    <p>
+        <a th:href="@{InputAnswer.do}" href="InputAnswer.html">Back to the Quiz</a>
+    </p>
+</main>
+<footer>Sheridan College, 2019</footer>
+</body>
+</html>
