@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--/*@thymesVar id="A" type="java.lang.String"*/-->
-<!--/*@thymesVar id="B" type="java.lang.String"*/-->
-<!--/*@thymesVar id="userAnswer" type="java.lang.String"*/-->
 <head>
     <meta charset="UTF-8">
     <link th:href="@{css/main.css}" href="../static/css/main.css" rel="stylesheet"  type="text/css"/>
@@ -22,9 +19,9 @@
         <span th:text="${userAnswer}" class="wrong">A</span>?
     </p>
     <p>
-        <a th:href="@{InputAnswer.do}" href="InputAnswer.html">Back to the Quiz</a>
+        <a th:href="@{input-answer}" href="InputAnswer.html">Back to the Quiz</a>
     </p>
 </main>
-<footer>Sheridan College, 2019</footer>
+<footer>Sheridan College, 2022</footer>
 </body>
 </html>

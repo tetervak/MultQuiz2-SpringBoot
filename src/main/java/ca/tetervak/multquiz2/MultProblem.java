@@ -1,4 +1,4 @@
-package ca.javateacher.multquiz2;
+package ca.tetervak.multquiz2;
 
 import java.io.Serializable;
 

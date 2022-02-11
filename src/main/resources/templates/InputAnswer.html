@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--/*@thymesVar id="problem" type="ca.javateacher.multquiz2.MultProblem"*/-->
 <head>
     <meta charset="UTF-8">
     <title>Input Answer</title>
@@ -11,7 +10,7 @@
     <h1>Multiplication Quiz 2</h1>
     <h2>Problem</h2>
     <h3>Enter your answer</h3>
-    <form th:action="@{CheckAnswer.do}" action="RightAnswer.html" method="get" >
+    <form th:action="@{check-answer}" action="RightAnswer.html" method="get" >
         <p>
             <label for="answer" class="problem_text">
                 <span th:text="${session.problem.a}" class="number">2</span>
@@ -25,6 +24,6 @@
         </p>
     </form>
 </main>
-<footer>Sheridan College, 2019</footer>
+<footer>Sheridan College, 2022</footer>
 </body>
 </html>

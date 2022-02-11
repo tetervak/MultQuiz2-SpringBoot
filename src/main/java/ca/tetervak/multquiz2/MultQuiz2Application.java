@@ -1,4 +1,4 @@
-package ca.javateacher.multquiz2;
+package ca.tetervak.multquiz2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

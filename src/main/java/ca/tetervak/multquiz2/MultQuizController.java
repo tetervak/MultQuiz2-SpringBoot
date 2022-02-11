@@ -1,4 +1,4 @@
-package ca.javateacher.multquiz2;
+package ca.tetervak.multquiz2;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,14 +10,14 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class MultQuizController {
 
-    @RequestMapping(value={"/", "InputAnswer.do"})
+    @RequestMapping(value={"/", "input-answer"})
     public String inputAnswer(HttpSession session){
         MultProblem problem = new MultProblem();
         session.setAttribute("problem", problem);
         return "InputAnswer";
     }
 
-    @RequestMapping("CheckAnswer.do")
+    @RequestMapping("check-answer")
     public ModelAndView checkAnswer(
             @RequestParam String userAnswer,
             HttpSession session){
