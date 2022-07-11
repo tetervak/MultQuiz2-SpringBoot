@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <link th:href="@{css/main.css}" href="../static/css/main.css" rel="stylesheet"  type="text/css"/>
-    <title>Right Answer</title>
+    <title>See Answer</title>
 </head>
 <body>
 <main>
     <h1>Multiplication Quiz 2</h1>
-    <h2>Right Answer</h2>
-    <h3>Your answer is right</h3>
+    <h2>See Answer</h2>
+    <h3>Here is the answer to the problem</h3>
     <p class="problem_text">
         <span th:text="${session.problem.a}" class="number">2</span>
         &times;
-        <span th:text="${session.problem.b}" class="number">2</span>
-        =
-        <span th:text="${userAnswer}" class="number">4</span>
+        <span th:text="${session.problem.b}" class="number">2</span> =
+        <span th:text="${session.problem.answer}" class="number">4</span>
     </p>
     <p>
         <a th:href="@{new-problem}" href="NewProblem.html">New Problem</a>

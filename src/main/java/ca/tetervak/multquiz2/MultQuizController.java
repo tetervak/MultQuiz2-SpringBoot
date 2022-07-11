@@ -10,11 +10,31 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class MultQuizController {
 
-    @RequestMapping(value={"/", "input-answer"})
-    public String inputAnswer(HttpSession session){
+    @RequestMapping(value={"/", "new-problem"})
+    public String newProblem(HttpSession session){
         MultProblem problem = new MultProblem();
         session.setAttribute("problem", problem);
-        return "InputAnswer";
+        return "NewProblem";
+    }
+
+    @RequestMapping( "see-answer")
+    public String seeAnswer(HttpSession session){
+        MultProblem problem = (MultProblem) session.getAttribute("problem");
+        if (problem == null) {
+            return "SessionExpired";
+        } else {
+            return "SeeAnswer";
+        }
+    }
+
+    @RequestMapping("try-again")
+    public String tryAgain(HttpSession session){
+        MultProblem problem = (MultProblem) session.getAttribute("problem");
+        if (problem == null) {
+            return "SessionExpired";
+        } else {
+            return "TryAgain";
+        }
     }
 
     @RequestMapping("check-answer")
