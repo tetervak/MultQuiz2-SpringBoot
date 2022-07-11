@@ -18,6 +18,7 @@ public class MultQuizController {
     public String newProblem(HttpSession session){
         log.trace("newProblem() is called");
         MultProblem problem = new MultProblem();
+        log.debug("a={}, b={}, answer={}", problem.getA(), problem.getB(), problem.getAnswer());
         session.setAttribute("problem", problem);
         return "NewProblem";
     }
